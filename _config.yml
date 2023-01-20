@@ -21,7 +21,7 @@ timezone: 'Asia/Seoul'
 
 title: JH                          # the main title
 
-tagline: A Game Dev Blog   # it will display as the sub-title
+tagline: A game dev blog   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A log of game development.
