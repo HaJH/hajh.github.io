@@ -1,13 +1,9 @@
-# 2023-01-27-HowToExposeMySettingsToUnrealProjectSettings
-
 ---
 title : 내 게임의 세팅을 언리얼 에디터 프로젝트 세팅에 노출하는 방법
 date: 2023-01-27 20:09:00 +0900
 categories: [언리얼, 프로그래밍]
 tags: [언리얼, 프로그래밍]
 ---
-
-
 
 모듈 별로 하나씩 만들어두면 편하게 쓰인다.
 
@@ -20,7 +16,7 @@ UCLASS(config=Game, defaultconfig)
 class MAINMENU_API UMainMenuSettings : public UObject
 ```
 
-이후 세팅에 노출시키고 싶은 프로퍼티를 다음과 같은 지시자를 달아준다.
+이후 세팅에 노출시키고 싶은 프로퍼티에 다음과 같은 지시자를 달아준다.
 
 ```cpp
 UPROPERTY(config, EditAnywhere, Category = "MainMenu")
@@ -33,7 +29,7 @@ TSubclassOf<class AMainMenuPawn> MainMenuPawnClass;
 
 클래스가 위치한 모듈의 모듈 파일로 이동한다. 없으면 하나 만들자.
 
-모듈의 StartupModule에서 SettingsModule 포인터를 얻어서 세팅을 등록하면 된다.
+모듈 클래스의 함수 StartupModule에서 SettingsModule 포인터를 얻어서 세팅 클래스를 등록하면 된다.
 
 ```cpp
 void FMainMenu::StartupModule()
@@ -59,7 +55,7 @@ void FMainMenu::UnregisterSettings()
 
 이제 엔진을 실행해보면 다음처럼 프로젝트 세팅에 섹션이 추가된 것을 볼 수 있다.
 
-![Untitled](2023-01-27-HowToExposeMySettingsToUnrealProjectSettings/Untitled.png)
+![Untitled](/assets/img/posts/2023-01-27-HowToExposeMySettingsToUnrealProjectSettings/Untitled.png)
 
 코드에서 참조하기 편하도록 아래처럼 게터를 만들어서 쓰는 것도 괜찮다.
 
