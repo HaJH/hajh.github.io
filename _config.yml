@@ -54,7 +54,7 @@ google_site_verification:               # fill in to your verification string
 # The end of `jekyll-seo-tag` settings
 
 google_analytics:
-  id:                 # fill in your Google Analytics ID
+  id: 'G-PCD19Q2SDV'                # fill in your Google Analytics ID
   # Google Analytics pageviews report settings
   pv:
     proxy_endpoint:   # fill in the Google Analytics superProxy endpoint of Google App Engine
@@ -93,9 +93,8 @@ comments:
     shortname:    # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
-    repo: "HaJH/hajh.github.io"        # <gh-username>/<repo>
-    issue_term: "pathname"  # < url | pathname | title | ...>
-    crossorigin: "anonymous"
+    repo: 'HaJH/hajh.github.io'        # <gh-username>/<repo>
+    issue_term: 'pathname'  # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
     repo:              # <gh-username>/<repo>
